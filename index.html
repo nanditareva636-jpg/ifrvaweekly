@@ -1,41 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFORMATIKA KELAS A</title>
+    <title>Home - Web Informatika</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1> WEB INFORMATIKA</h1> 
-   <hr>
-   <table border="1" cellspacing="0" cellpadding="10">
 
-    <tr>
-        <td><a href="index.html">home</a></td>
-        <td><a href="profile.html">profil</a></td>
-        <td><a href="contact.html">Contact</a></td>
-        <td><a href="datamahasiswa.html">Data Mahasiswa</a></td>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profil</a>
+    <a href="contact.html">Contact</a>
+    <a href="datamahasiswa.html">Data Mahasiswa</a>
+</nav>
 
-    </tr>
-   </table>
-    <h2>Sambutan Kaprodi</h2>
-    <img src="assets/images/reva.jpeg" alt="Kaprodi" width="200px"/>
-    <p>
-        <b>Nama : Reva Nandita, Phd.</br>
-         Jabatan : <i>Profesor</i> <b></br>
-        Sambutan : <br> H<sub>2</sub>0,2<sup>2</sup>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat fugit eos alias, voluptas iusto deserunt dolorum ad libero ab aliquam natus obcaecati officia rem? Hic maxime voluptates odit eos dicta.<br>
-        </b>
-    </s>
-    </p>
-    <h3>Daftar Publikasi</h3>
-    <ul>
-        <li>Scopus</li>
-           <ul>
-            <li>Sentimen Analysis</li>
-           </ul>
-        <li>WOS</li>
-        <li>Sinta</li>
-    </ul>
-    
+<div class="container">
+
+    <div class="card">
+        <h1>Selamat Datang di Web Informatika</h1>
+        <p style="text-align:center;">
+            Website ini berisi informasi profil, data mahasiswa, dan kontak.
+        </p>
+    </div>
+
+    <div class="card" style="display:flex; gap:30px; align-items:center;">
+        
+        <img src="assets/images/reva.jpeg" width="200">
+
+        <div>
+            <h2>Sambutan Kaprodi</h2>
+            <p><b>Nama:</b> Reva Nandita, Phd.</p>
+            <p><b>Jabatan:</b> Profesor</p>
+
+            <p>
+                <b>Sambutan:</b><br>
+                H<sub>2</sub>O<sup>2</sup> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Fugiat fugit eos alias, voluptas iusto deserunt dolorum ad libero ab aliquam.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h2>Daftar Publikasi</h2>
+        <ul>
+            <li>Scopus
+                <ul>
+                    <li>Sentiment Analysis</li>
+                </ul>
+            </li>
+            <li>WOS</li>
+            <li>Sinta</li>
+        </ul>
+    </div>
+
+</div>
+
 </body>
 </html>
