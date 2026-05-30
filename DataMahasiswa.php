@@ -7,10 +7,10 @@
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="profile.html">Profil</a>
-    <a href="contact.html">Contact</a>
-    <a href="datamahasiswa.html">Data Mahasiswa</a>
+    <a href="index.php">Home</a>
+    <a href="profile.php">Profil</a>
+    <a href="contact.php">Contact</a>
+    <a href="datamahasiswa.php">Data Mahasiswa</a>
 </nav>
 
 <div class="container">
@@ -18,39 +18,41 @@
     <div class="card">
         <h2>Data Mahasiswa</h2>
 
-        <a href="inputdata.html">
+        <a href="inputdata.php">
             <button>+ Tambah Data</button>
         </a>
 
-        <table>
+        <table border="1" cellpadding="Spx">
             <tr>
                 <th>No</th>
                 <th>Nama</th>
                 <th>NIM</th>
+                <th>Jurusan</th>
+                <th>Email</th>
+                <th>No.HP</th>
                 <th>Foto</th>
-                <th>UTS</th>
-                <th>UAS</th>
-                <th>Tugas</th>
+                <th>Aksi</th>
             </tr>
 
             <tr>
                 <td>1</td>
                 <td>Zhang Linghe</td>
                 <td>13182420002</td>
+                <td>Informatika</td>
+                <td>nanditareva636@gmail.com</td>
+                <td>08995855520</td>
                 <td><img src="assets/images/Zhang Linghe.jpg" width="70"></td>
-                <td>85</td>
-                <td>88</td>
-                <td>100</td>
+                <td><a href="editdata.php"><button>EDIT</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
             </tr>
 
             <tr>
                 <td>2</td>
                 <td>Reva Nandita</td>
                 <td>13182420068</td>
-                <td><img src="assets/images/reva.jpeg" width="70"></td>
-                <td>85</td>
-                <td>88</td>
-                <td>100</td>
+                <td>Informatika</td>
+                <td>nanditareva636@gmail.com</td>
+                <td>08995855520</td>
+                <td><img src="assets/images/Zhang Linghe.jpg" width="70"></td>
             </tr>
 
         </table>
