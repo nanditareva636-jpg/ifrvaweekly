@@ -1,3 +1,36 @@
+<?php
+require 'fungsi.php';
+
+if (isset($_POST["kirim"])) {
+
+    $nama = $_POST["nama"];
+    $nim = $_POST["nim"];
+    $prodi = $_POST["jurusan"];
+    $email = $_POST["email"];
+    $nohp = $_POST["nohp"];
+    $foto = $_POST["foto"];
+
+    $query = "INSERT INTO mahasiswa (nama, nim, jurusan, email, no_hp, foto)
+              VALUES ('$nama', '$nim', '$prodi', '$email', '$nohp', '$foto')";
+
+    mysqli_query($conn, $query);
+
+    if (mysqli_affected_rows($conn) > 0) {
+        echo "<script>
+                alert('Data Berhasil Ditambahkan!');
+                window.location.href='DataMahasiswa.php';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Data Gagal Ditambahkan!');
+              </script>";
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,40 +40,40 @@
 </head>
 <body>
     <h2>Tambah Data Mahasiswa</h2>
-    <form action="proses_input.php" method="post">
+    <form action="" method="post">
         <table>
             <tr>
                 <td><label for="nama">Nama:</label></td>
                 <td>:</td>
-                <td><input type="text" id="nama" name="nama" required></td>
+                <td><input type="text" name="nama" id="nama" /></td>
             </tr>
             <tr>
-                <td><label for="nama">NIM:</label></td>
+                <td><label for="nim">NIM:</label></td>
                 <td>:</td>
-                <td><input type="text" id="nim" name="nim" required></td>
+                <td><input type="number" name="nim" id="nim"/></td>
             </tr>
             <tr>
-                <td><label for="foto">Foto:</label></td>
+                <td><label for="jurusan">Jurusan</label></td>
                 <td>:</td>
-                <td><input type="file" id="foto" name="foto" accept="image/*"></td>
+                <td><input type="text" name="jurusan" id="jurusan"/></td>
             </tr>
             <tr>
-                <td><label for="uts">UTS:</label></td>
+                <td><label for="email">Email</label></td>
                 <td>:</td>
-                <td><input type="number" id="uts" name="uts" min="0" max="100" required></td>
+                <td><input type="email" name="email" id="email"/></td>
             </tr>
             <tr>
-                <td><label for="uas">UAS:</label></td>
+                <td><label for="nohp">Nomor HP</label></td>
                 <td>:</td>
-                <td><input type="number" id="uas" name="uas" min="0" max="100" required></td>
+                <td><input type="number" name="nohp" id="nohp"/></td>
             </tr>
             <tr>
-                <td><label for="tugas">TUGAS:</label></td>
+                <td><label for="foto">Foto</label></td>
                 <td>:</td>
-                <td><input type="number" id="tugas" name="tugas" min="0" max="100" required></td>
+                <td><input type="text" name="foto" id="foto"/></td>
             </tr>
         </table>
-        <button type="submit" name="submit" id="submit">Tambah Data</button>
+        <button type="submit" name="kirim" >Tambah Data</button>
     
     </form>
 </body>

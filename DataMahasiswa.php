@@ -1,24 +1,8 @@
 <?php
+require 'fungsi.php';
 
-    $koneksi = mysqli_connect("localhost", "root", "", "ifrvaweekly");
-   // if($koneksi)
-   //     {
-      //      echo "Koneksi Berhasil!";
-        
-
-        $query = "SELECT * FROM mahasiswa";
-        $result = mysqli_query($koneksi, $query);
-        /// ambil data (fetch) mahasiswa dari lemari result
-        /// mysqli_fetch_row
-        /// mysqli_fetch_assoc array asosiatif
-        /// mysqli_fetch_object -> object data
-        /// mysqli_fetch_array 
-
-        //$mhs = mysqli_fetch_object($result);
-        // {
-        //}
-
-        var_dump($mhs->nama);
+$qmahasiswa = "SELECT * FROM mahasiswa";
+$mahasiswas = tampildata($qmahasiswa);
 
 ?>
 
@@ -61,7 +45,8 @@
                 <th>Aksi</th>
             </tr>
             <?php  
-            while($mhs = mysqli_fetch_assoc($result))
+            $i = 1;
+            foreach($mahasiswas as $mhs)
                 {
             ?>
 
@@ -72,7 +57,7 @@
                 <td><?php echo $mhs["jurusan"]?></td>
                 <td><?php echo $mhs["email"]?></td>
                 <td><?php echo $mhs["no_hp"]?></td>
-                <td><img src="assets/images/Zhang Linghe.jpg.jpg"/<?php echo $mhs["foto"]?>" width="70"></td>
+               <td><img src="assets/images/<?php echo $mhs['foto']; ?>" width="70"></td>
                 <td><a href="editdata.php"><button>EDIT</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
             </tr>
             <?php
