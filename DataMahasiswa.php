@@ -58,24 +58,12 @@ $mahasiswas = tampildata($qmahasiswa);
                 <td><?php echo $mhs["email"]?></td>
                 <td><?php echo $mhs["no_hp"]?></td>
                <td><img src="assets/images/<?php echo $mhs['foto']; ?>" width="70"></td>
-                <td><a href="editdata.php"><button>EDIT</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
+                <td><a href="editdata.php ?id=<?= $mhs['id']; ?>" onclick="return confirm('Yakin?')"><button type="button">DELETE</button></a> | <a 
+                href="deletedata.php?id=<?=$mhs["id"]?>" onclick="return confirm('yaqueenn??')"><button>DELETE</button></a></td>
             </tr>
             <?php
                 }
                 ?>
-
-            <tr>
-                <td>2</td>
-                <td>Reva Nandita</td>
-                <td>13182420068</td>
-                <td>Informatika</td>
-                <td>nanditareva636@gmail.com</td>
-                <td>08995855520</td>
-                <td><img src="assets/images/reva.jpg.jpeg" width="70"></td>
-                <td><a href="editdata.php"><button>EDIT</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>
-            </tr>
-    
-
         </table>
     </div>
 
